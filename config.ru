@@ -2,17 +2,18 @@
 require 'bundler/setup'
 require 'sinatra/base'
 
-# Development Requires
-require 'rack-livereload'
-
 # Require GadGenie
 Dir[File.dirname(__FILE__) + '/lib/*'].each {|f| require f}
 Dir[File.dirname(__FILE__) + '/models/*'].each {|f| require f}
 
 require './gadgenie'
 
-# Use livereload
-use Rack::LiveReload
+# Development Requires
+if ENV['RACK_ENV'] == "development"
+	require 'rack-livereload'
+	# Use livereload
+	use Rack::LiveReload
+end
 
 # Performance optimization
 # use Rack::Deflater #Enable GZip Compression
