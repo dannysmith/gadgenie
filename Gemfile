@@ -4,6 +4,9 @@ ruby '2.0.0'
 gem 'sinatra'
 gem 'sass'
 gem 'cucumber'
+gem 'rspec'
+gem 'rack-test'
+gem 'codeclimate-test-reporter', group: :test, require: nil
 
 group :development do
 	gem 'thin'

@@ -6,7 +6,7 @@ require 'sinatra/base'
 require 'rack-livereload'
 
 # Require GadGenie
-Dir[File.dirname(__FILE__) + '/lib/*'].each {|f| require f} # Does sinatra include by default?
+Dir[File.dirname(__FILE__) + '/lib/*'].each {|f| require f}
 Dir[File.dirname(__FILE__) + '/models/*'].each {|f| require f}
 
 require './gadgenie'

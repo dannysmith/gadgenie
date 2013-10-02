@@ -13,13 +13,16 @@ profiles.each do |name, value|
   end
 end
 
-Cucumber::Rake::Task.new(:report, "Output an HTML report and rerun.txt file to reports/") do |t|
+Cucumber::Rake::Task.new(:creport, "Output an HTML report and rerun.txt file to reports/") do |t|
   t.profile = 'default'
   t.cucumber_opts = "--format html --out results/test_report_demo.html --format rerun --out results/rerun.txt"
 end
 
+Cucumber::Rake::Task.new(:cucumber, "Run all cucumber tests") do |t|
+  t.profile = 'all'
+end
 
-Cucumber::Rake::Task.new(:rerun, "Rerun failed scenarios from 'report' rake task") do |t|
+Cucumber::Rake::Task.new(:crerun, "Rerun failed scenarios from 'report' rake task") do |t|
   t.profile = 'default'
   t.cucumber_opts = "@results/rerun.txt -r features"
 end

@@ -10,4 +10,9 @@ class Gadgenie < Sinatra::Base
   get '/' do
     erb :index
   end
+
+  get '/hello' do
+  	status 200
+  	'Hello World'
+  end
 end
