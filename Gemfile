@@ -6,6 +6,8 @@ gem 'sass'
 gem 'cucumber'
 gem 'rspec'
 gem 'rack-test'
+gem 'thin'
+gem 'pg'
 gem 'codeclimate-test-reporter', group: :test, require: nil
 
 group :development do
