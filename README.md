@@ -1,3 +1,5 @@
+[![Dependency Status](https://gemnasium.com/87aecc4545b396d0889a4860a9de2f99.png)](https://gemnasium.com/dannysmith/gadgenie)
+
 # GadGenie 2
 
 Note: To launch the app locally, just call 'guard' and open a browser to localhost:3000.

@@ -1,5 +1,7 @@
 # Rakefile
 
+
+######### CUCUMBER TASKS #########
 require 'cucumber'
 require 'cucumber/rake/task'
 require 'yaml'
@@ -35,4 +37,12 @@ Cucumber::Rake::Task.new(:t, "Run 'all' profile, pass tags as args.") do |t|
     options.concat("--tags #{tag} ") if tag.match(/^(?:@|~)/) #Only add arguments that begin with '@' or '~'.
   end
   t.cucumber_opts = options
+end
+
+
+
+
+task :build do
+  require 'jammit'
+  Jammit.package!
 end

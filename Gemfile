@@ -13,11 +13,15 @@ gem 'codeclimate-test-reporter', group: :test, require: nil
 group :development do
 	gem 'thin'
 
+  if RUBY_PLATFORM.downcase.include?("darwin")
+    gem 'rb-fsevent'
+    gem 'growl' # also install growlnotify
+  end
+
   gem 'guard'
   gem 'guard-bundler'
   gem 'guard-shotgun', :git => 'https://github.com/rchampourlier/guard-shotgun.git'
 
-  gem 'rb-fsevent'
   gem 'rack-livereload'
   gem 'guard-livereload'
 
@@ -25,6 +29,7 @@ group :development do
   gem 'jammit'
   gem "uglifier"
   gem 'guard-jammit'
+  gem 'guard-shell'
 
   # gem 'guard-migrate' # For ActiveRecord https://github.com/guard/guard-migrate
   gem 'pry'

@@ -1,6 +1,13 @@
-gzip_assets: off
+package_assets:   on
+embed_assets:     off
+compress_assets:  on
+gzip_assets:      on
 javascript_compressor: uglifier
 
 javascripts:
-  public/js/main.min:
+  js/main.min:
     - javascripts/*.js
+
+stylesheets:
+  css/main.min:
+    - public/css/main.css

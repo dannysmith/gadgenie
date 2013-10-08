@@ -1,4 +1,5 @@
 # # Guardfile
+notification :growl
 
 # Reload the app (but not the browser) on changes to ruby files
 guard :shotgun, server: 'thin', port: 3000 do
@@ -13,14 +14,17 @@ guard :bundler do
 end
 
 # Rebuild the css when any SASS files are changed.
-guard :sass, input: 'scss', output: 'public/css', style: 'expanded'
+guard :sass, input: 'scss', output: 'public/css', style: 'expanded', all_on_start: true
 
 # Concatinate JS using Jammit (could use for CSS too).
 guard :jammit,
   :config_path => "assets.yml",
-  :output_folder => "." do
+  :output_folder => "./public",
+  :package_on_start => true do
     watch %r{javascripts/.+\.js$}
-  end
+    watch 'public/css/main.css'
+    watch 'assets.yml'
+end
 
 # Reload the browser on changes to CSS, ERB or HTML.
 guard :livereload do
@@ -34,6 +38,3 @@ end
 #   watch('db/seeds.rb')
 # end
 
-# guard :uglify, :destination_file => "public/javascripts/application.min.js" do
-#   watch (%r{public/javascripts/*.js})
-# end
