@@ -13,10 +13,8 @@ gem 'codeclimate-test-reporter', group: :test, require: nil
 group :development do
 	gem 'thin'
 
-  if RUBY_PLATFORM.downcase.include?("darwin")
-    gem 'rb-fsevent'
-    gem 'growl' # also install growlnotify
-  end
+  gem 'rb-fsevent'
+  gem 'growl' # also install growlnotify
 
   gem 'guard'
   gem 'guard-bundler'
