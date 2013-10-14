@@ -10,6 +10,7 @@ gem 'thin'
 gem 'pg'
 gem 'codeclimate-test-reporter', group: :test, require: nil
 gem 'coveralls', require: false
+gem 'newrelic_rpm', group: :production
 
 group :development do
 	gem 'thin'
