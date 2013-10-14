@@ -7,6 +7,10 @@ class Gadgenie < Sinatra::Base
     BetterErrors.application_root = __dir__
   end
 
+  configure :production do
+    require 'newrelic_rpm'
+  end
+
   get '/' do
     erb :index
   end
