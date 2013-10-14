@@ -17,7 +17,7 @@ group :development do
   gem 'rb-fsevent'
   gem 'growl' # also install growlnotify
 
-  gem 'guard'
+  gem 'guard', '~> 2.0.0'
   gem 'guard-bundler'
   gem 'guard-shotgun', :git => 'https://github.com/rchampourlier/guard-shotgun.git'
 
@@ -31,7 +31,7 @@ group :development do
   gem 'guard-shell'
 
   # gem 'guard-migrate' # For ActiveRecord https://github.com/guard/guard-migrate
-  gem 'pry'
+  gem 'pry', '>= 0.9.12'
   gem 'rubocop'
 
   gem 'binding_of_caller'
