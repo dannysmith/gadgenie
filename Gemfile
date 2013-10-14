@@ -9,6 +9,7 @@ gem 'rack-test'
 gem 'thin'
 gem 'pg'
 gem 'codeclimate-test-reporter', group: :test, require: nil
+gem 'coveralls', require: false
 
 group :development do
 	gem 'thin'

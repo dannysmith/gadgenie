@@ -3,7 +3,9 @@ require 'sinatra'
 require 'rack/test'
 require 'rspec'
 require 'codeclimate-test-reporter'
+require 'coveralls'
 
+Coveralls.wear!
 CodeClimate::TestReporter.start
 
 # Require GadGenie
