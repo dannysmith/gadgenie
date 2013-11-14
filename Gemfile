@@ -5,6 +5,7 @@ gem 'sinatra'
 gem 'sass'
 gem 'cucumber'
 gem 'rspec'
+gem "watir", "~> 4.0.0"
 gem 'rack-test'
 gem 'thin'
 gem 'pg'

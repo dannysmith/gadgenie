@@ -1,3 +1,10 @@
+class Danny
+  def initialize(mood = 'Good')
+    @mood = mood
+  end
+end
+
+
 # Gadgenie main Application class.
 class Gadgenie < Sinatra::Base
 
