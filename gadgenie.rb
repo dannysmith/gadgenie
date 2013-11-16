@@ -1,9 +1,4 @@
-class Danny
-  def initialize(mood = 'Good')
-    @mood = mood
-  end
-end
-
+require 'pry-remote'
 
 # Gadgenie main Application class.
 class Gadgenie < Sinatra::Base
@@ -25,5 +20,10 @@ class Gadgenie < Sinatra::Base
   get '/hello' do
   	status 200
   	'Hello World'
+  end
+
+  get '/foobar' do
+    #binding.remote_pry
+    raise 'an error'
   end
 end

@@ -12,6 +12,9 @@ gem 'pg'
 gem 'codeclimate-test-reporter', group: :test, require: nil
 gem 'coveralls', require: false
 gem 'newrelic_rpm', group: :production
+gem 'pry', '>= 0.9.12'
+gem 'pry-remote'
+
 
 group :development do
 	gem 'thin'
@@ -21,7 +24,8 @@ group :development do
 
   gem 'guard', '~> 2.0.0'
   gem 'guard-bundler'
-  gem 'guard-shotgun', :git => 'https://github.com/rchampourlier/guard-shotgun.git'
+  #gem 'guard-shotgun', :git => 'https://github.com/rchampourlier/guard-shotgun.git'
+  gem 'guard-pow', require: false
 
   gem 'rack-livereload'
   gem 'guard-livereload'
@@ -33,7 +37,6 @@ group :development do
   gem 'guard-shell'
 
   # gem 'guard-migrate' # For ActiveRecord https://github.com/guard/guard-migrate
-  gem 'pry', '>= 0.9.12'
   gem 'rubocop'
 
   gem 'binding_of_caller'

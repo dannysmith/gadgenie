@@ -2,7 +2,7 @@
 notification :growl
 
 # Reload the app (but not the browser) on changes to ruby files
-guard :shotgun, server: 'thin', port: 3000 do
+guard :pow do
   watch %r{^(lib|models)/.*\.rb}
   watch 'config.ru'
   watch 'gadgenie.rb'
