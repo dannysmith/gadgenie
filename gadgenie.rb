@@ -1,9 +1,4 @@
-class Danny
-  def initialize(mood = 'Good')
-    @mood = mood
-  end
-end
-
+require 'pry'
 
 # Gadgenie main Application class.
 class Gadgenie < Sinatra::Base
@@ -22,8 +17,12 @@ class Gadgenie < Sinatra::Base
     erb :index
   end
 
-  get '/hello' do
+  get '/hello/?' do
   	status 200
-  	'Hello World'
+  	"Hello World!"
+  end
+
+  get '/error/?' do
+    raise 'an error'
   end
 end

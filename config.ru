@@ -9,7 +9,7 @@ Dir[File.dirname(__FILE__) + '/models/*'].each {|f| require f}
 require './gadgenie'
 
 # Development Requires
-if ENV['RACK_ENV'] == "development"
+if ENV['RACK_ENV'] != "production"
 	require 'rack-livereload'
 	# Use livereload
 	use Rack::LiveReload

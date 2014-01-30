@@ -1,0 +1,70 @@
+{
+  "Cucumber Features": {
+    "coverage": {
+      "/Users/danny/Dropbox/projects/C/Gadgenie 2/gadgenie2/features/support/hooks.rb": [
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/danny/Dropbox/projects/C/Gadgenie 2/gadgenie2/features/step_definitions/example_steps.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1391082431
+  },
+  "RSpec": {
+    "coverage": {
+      "/Users/danny/Dropbox/projects/C/Gadgenie 2/gadgenie2/gadgenie.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1391082475
+  }
+}
