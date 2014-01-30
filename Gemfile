@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Base
+gem 'rake'
 gem 'sinatra'
 gem 'sass'
 gem 'thin'
