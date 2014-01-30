@@ -17,14 +17,12 @@ class Gadgenie < Sinatra::Base
     erb :index
   end
 
-  get '/hello/:name' do
+  get '/hello/?' do
   	status 200
-    F.foo
-  	"Hello World! #{params[:name]}"
+  	"Hello World!"
   end
 
-  get '/foobar' do
-    #binding.remote_pry
+  get '/error/?' do
     raise 'an error'
   end
 end
