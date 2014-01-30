@@ -5,7 +5,7 @@ gem 'sinatra'
 gem 'sass'
 gem 'cucumber'
 gem 'rspec'
-gem "watir", "~> 4.0.0"
+gem 'watir', '~> 4.0.0'
 gem 'rack-test'
 gem 'thin'
 gem 'pg'
@@ -13,8 +13,6 @@ gem 'codeclimate-test-reporter', group: :test, require: nil
 gem 'coveralls', require: false
 gem 'newrelic_rpm', group: :production
 gem 'pry', '>= 0.9.12'
-gem 'pry-remote'
-
 
 group :development do
 	gem 'thin'
@@ -25,7 +23,7 @@ group :development do
   gem 'guard', '~> 2.0.0'
   gem 'guard-bundler'
   #gem 'guard-shotgun', :git => 'https://github.com/rchampourlier/guard-shotgun.git'
-  gem 'guard-pow', require: false
+  gem 'guard-rack'
 
   gem 'rack-livereload'
   gem 'guard-livereload'

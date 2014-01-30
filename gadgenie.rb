@@ -1,4 +1,4 @@
-require 'pry-remote'
+require 'pry'
 
 # Gadgenie main Application class.
 class Gadgenie < Sinatra::Base
@@ -17,9 +17,10 @@ class Gadgenie < Sinatra::Base
     erb :index
   end
 
-  get '/hello' do
+  get '/hello/:name' do
   	status 200
-  	'Hello World'
+    F.foo
+  	"Hello World! #{params[:name]}"
   end
 
   get '/foobar' do

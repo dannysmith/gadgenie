@@ -1,8 +1,9 @@
-# # Guardfile
+# uardfile
 notification :growl
 
-# Reload the app (but not the browser) on changes to ruby files
-guard :pow do
+# Restart the rack server when a ruby file is changed.
+guard 'rack', :port => 4567 do
+  watch('Gemfile.lock')
   watch %r{^(lib|models)/.*\.rb}
   watch 'config.ru'
   watch 'gadgenie.rb'
