@@ -7,4 +7,5 @@
 
 # Working on the App
 
-Development branch is deployed to dev.
+To deploy to gadgenie-dev.manyhatsdesign.com, push to the dev branch.
+To deploy to production (gadgenie.manyhatsdesign.com), push to the master branch.
